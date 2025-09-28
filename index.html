@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Tech Syslog Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="icon.png">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-link.active {
+            border-bottom: 2px solid #3b82f6; /* blue-500 */
+            color: #ffffff; /* white */
+        }
+        .bg-dots {
+            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+            background-size: 2rem 2rem;
+        }
+        .page-section {
+            display: none;
+        }
+        .page-section.active {
+            display: block;
+        }
+        .microsoft-store-button {
+            transition: all 0.2s ease-in-out;
+        }
+        .microsoft-store-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 antialiased flex flex-col min-h-screen">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <!-- K-Tech Logo Image -->
+                <img src="icon.png" alt="K-Tech Logo" class="h-8 w-8">
+                <span class="text-2xl font-bold text-white">K-Tech</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link text-gray-300 font-medium pb-1 active">Home</a>
+                <a href="#privacy" class="nav-link text-gray-300 font-medium pb-1">Privacy</a>
+                <a href="#contact" class="nav-link text-gray-300 font-medium pb-1">Contact Us</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#home" class="block nav-link text-gray-300 font-medium py-2 active">Home</a>
+            <a href="#privacy" class="block nav-link text-gray-300 font-medium py-2">Privacy</a>
+            <a href="#contact" class="block nav-link text-gray-300 font-medium py-2">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow">
+        <!-- Home Page Section -->
+        <section id="home" class="page-section active bg-dots">
+            <div class="container mx-auto px-6 py-24 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                    The Ultimate <span class="text-blue-400">Syslog Manager</span> for Windows
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+                    Effortlessly monitor, manage, and archive your syslog data in real-time. Our powerful tool provides a seamless experience for IT professionals and network enthusiasts.
+                </p>
+                <a href="https://apps.microsoft.com/store/apps" target="_blank" rel="noopener noreferrer" class="microsoft-store-button inline-block">
+                    <img src="https://placehold.co/210x60/333333/FFFFFF?text=Get+it+from+Microsoft" alt="Get it from Microsoft Store" class="h-auto w-[210px] rounded-md">
+                </a>
+            </div>
+        </section>
+
+        <!-- Privacy Policy Section -->
+        <section id="privacy" class="page-section">
+            <div class="container mx-auto px-6 py-16 max-w-4xl">
+                <h2 class="text-4xl font-bold text-white mb-8 text-center">Privacy Policy</h2>
+                <div class="text-gray-300 space-y-4">
+                    <p>Your privacy is important to us. It is K-Tech's policy to respect your privacy regarding any information we may collect from you through our app, Syslog Manager, and our website.</p>
+                    <h3 class="text-2xl font-semibold text-white mt-6">Information We Collect</h3>
+                    <p>We do not require you to provide us with any personally identifiable information to use the core functionality of our application. Any configuration data, such as device IPs and log file locations, is stored locally in the application's configuration file on your computer.</p>
+                    <h3 class="text-2xl font-semibold text-white mt-6">Analytics</h3>
+                    <p>To improve our website and services, this site may use Google Analytics to collect information about traffic and usage. This service collects data such as how often users visit this site, what pages they visit when they do so, and what other sites they used prior to coming to this site. Google Analytics collects only the IP address assigned to you on the date you visit this site, rather than your name or other identifying information. We do not combine the information collected through the use of Google Analytics with personally identifiable information. You can read more about how Google uses your Personal Information here: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Google's Privacy Policy</a>.</p>
+                    <h3 class="text-2xl font-semibold text-white mt-6">Changes to This Privacy Policy</h3>
+                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="page-section">
+            <div class="container mx-auto px-6 py-16 text-center max-w-3xl">
+                <h2 class="text-4xl font-bold text-white mb-4">Contact Us</h2>
+                <p class="text-gray-400 mb-8">Have questions or need support? Reach out to us!</p>
+                <div class="bg-gray-800 rounded-lg p-8 inline-flex items-center space-x-4">
+                    <span id="email-text" class="text-lg text-white font-mono">support [at] k-tech.dev</span>
+                    <button id="copy-email-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300">Copy</button>
+                </div>
+                <p id="copy-feedback" class="mt-4 text-green-400 h-5"></p>
+            </div>
+        </section>
+
+        <!-- Sitemap Section -->
+        <section id="sitemap" class="page-section">
+            <div class="container mx-auto px-6 py-16 max-w-4xl">
+                <h2 class="text-4xl font-bold text-white mb-8 text-center">Sitemap</h2>
+                <ul class="text-center space-y-3">
+                    <li><a href="#home" class="nav-link text-blue-400 text-lg hover:underline">Home</a></li>
+                    <li><a href="#privacy" class="nav-link text-blue-400 text-lg hover:underline">Privacy</a></li>
+                    <li><a href="#contact" class="nav-link text-blue-400 text-lg hover:underline">Contact Us</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-500">
+            <div class="mb-4">
+                <a href="#sitemap" class="text-gray-400 hover:text-blue-400 hover:underline">Sitemap</a>
+            </div>
+            &copy; 2025 K-Tech. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pageSections = document.querySelectorAll('.page-section');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // --- Page Navigation Logic ---
+            const showPage = (hash) => {
+                const targetId = hash ? hash.substring(1) : 'home';
+                
+                pageSections.forEach(section => {
+                    section.classList.toggle('active', section.id === targetId);
+                });
+
+                navLinks.forEach(link => {
+                    const linkHash = new URL(link.href).hash;
+                    link.classList.toggle('active', linkHash === `#${targetId}`);
+                });
+
+                 // Close mobile menu after navigation
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            };
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const hash = new URL(link.href).hash;
+                    window.location.hash = hash;
+                });
+            });
+            
+            // Handle hash changes (for back/forward buttons and direct links)
+            window.addEventListener('hashchange', () => showPage(window.location.hash));
+
+            // Show initial page based on hash or default to home
+            showPage(window.location.hash || '#home');
+
+            // --- Mobile Menu Toggle ---
+            mobileMenuButton.addEventListener('click', (e) => {
+                // Stop the click from bubbling up to the document, which would instantly close the menu
+                e.stopPropagation();
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // --- Close menu when clicking outside ---
+            document.addEventListener('click', (e) => {
+                const isClickInsideMenu = mobileMenu.contains(e.target);
+                const isMenuButton = mobileMenuButton.contains(e.target);
+                
+                // If the menu is open and the click is not inside the menu or on the button, hide it.
+                if (!mobileMenu.classList.contains('hidden') && !isClickInsideMenu && !isMenuButton) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+
+            // --- Email Obfuscation & Copy ---
+            const emailTextElement = document.getElementById('email-text');
+            const copyEmailBtn = document.getElementById('copy-email-btn');
+            const copyFeedback = document.getElementById('copy-feedback');
+            const realEmail = 'support@k-tech.dev';
+
+            copyEmailBtn.addEventListener('click', () => {
+                const tempInput = document.createElement('input');
+                document.body.appendChild(tempInput);
+                tempInput.value = realEmail;
+                tempInput.select();
+                try {
+                     document.execCommand('copy');
+                     copyFeedback.textContent = 'Email copied to clipboard!';
+                } catch (err) {
+                     copyFeedback.textContent = 'Failed to copy email.';
+                }
+                document.body.removeChild(tempInput);
+
+                setTimeout(() => {
+                    copyFeedback.textContent = '';
+                }, 3000);
+            });
+        });
+    </script>
+
+</body>
+</html>
+
